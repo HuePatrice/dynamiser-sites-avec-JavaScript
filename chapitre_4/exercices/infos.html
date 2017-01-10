@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Informations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="contenu">ABC
+    <br>Easy as
+    <br>One, two, three
+</div>
+<div id="infos"></div>
+
+<script>
+
+    var styleElement = getComputedStyle(document.getElementById('contenu'));
+
+    var liste = document.createElement('ul');
+    var ligneLargeur = document.createElement('li');
+    ligneLargeur.textContent = "Largeur de l'élément: " + styleElement.width;
+    var ligneHauteur = document.createElement('li');
+    ligneHauteur.textContent = "Hauteur de l'élément: " + styleElement.height;
+    liste.appendChild(ligneLargeur);
+    liste.appendChild(ligneHauteur);
+
+    document.getElementById('infos').appendChild(document.createTextNode('Informations sur l\'élément: '));
+    document.getElementById('infos').appendChild(liste);
+
+
+
+
+</script>
+</body>
+
+</html>
