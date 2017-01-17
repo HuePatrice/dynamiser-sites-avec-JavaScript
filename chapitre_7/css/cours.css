@@ -1,0 +1,30 @@
+#cadre{
+    border: 1px solid red;
+}
+
+#bloc{
+    width: 20px;
+    height: 40px;
+    background: red;
+    position: relative; /* permettra de déplacer le bloc */
+    left: 0;/* initialise la position gauche du bloc à déplacer */
+
+    /*
+    ajout des CSS pour la partie 3
+     */
+    margin-left: -20px; /* simplifie la position initiale et finale du bloc */
+    animation-name: deplacerBloc; /* nom de la fonction */
+    animation-duration: 6s; /*durée de l'animation*/
+    animation-fill-mode: forwards; /*laisse le bloc dans sa position finale */
+}
+@keyframes deplacerBloc {
+
+    from{
+        /*Position initiale: bord gauche du cadre (en tenant compte du margin négatif)*/
+        left:20px;
+    }
+    to{
+        /*Position finale: bord droit du cadre (en tenant compte du margin négatif)*/
+        left: 100%;
+    }
+}
