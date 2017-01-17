@@ -29,7 +29,9 @@ form.addEventListener('submit', function(e){
        }
 
     } else {
+
         mdpMsg = 'Vos mots de passe sont différents';
+
     }
 
     document.getElementById('infoMdp').textContent = mdpMsg;
